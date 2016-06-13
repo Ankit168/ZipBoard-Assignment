@@ -1,0 +1,25 @@
+<body>
+  
+{{#if currentUser}}
+
+<div class="container">
+    <header>
+      <h1 align="center">Discussion Board</h1>
+
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add your comments" />
+        </form>
+	
+    </header>
+	
+ <p style="color:blue"><strong> Hi! This is a public discussion forum for Meteor, an open source platform for web,mobile, and desktop.So, you can use same code whether you're developing foe web,ios,Android or desktop.It's the fastest way to build JavaScript apps.</strong></p>
+   
+    <ul>
+      {{#each tasks}}
+       <img src="meteor.png" alt="Meteor" style="width:40px;height:40px;"> {{> task}} 
+      {{/each}}
+    </ul>
+</div>
+{{/if}}
+  
+</body>
